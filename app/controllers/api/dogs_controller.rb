@@ -3,4 +3,8 @@ class Api::DogsController < ApplicationController
     @dogs = Dog.all
     render 'index.json.jb'
   end
+
+  def show
+    render 'show.json.jb'
+  end
 end
