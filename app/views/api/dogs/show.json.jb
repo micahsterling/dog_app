@@ -1,1 +1,6 @@
-"show route"
+  {
+  id: @dogs.id,
+  name: @dogs.name,
+  breed: @dogs.breed,
+  age: @dogs.age
+  } 

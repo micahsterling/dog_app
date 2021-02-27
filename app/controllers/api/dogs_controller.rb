@@ -5,6 +5,7 @@ class Api::DogsController < ApplicationController
   end
 
   def show
+    @dogs = Dog.find_by(id: params[:id])
     render 'show.json.jb'
   end
 end
