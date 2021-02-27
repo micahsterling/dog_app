@@ -21,9 +21,9 @@ class Api::DogsController < ApplicationController
 
   def update
     @dogs = Dog.find_by(id: params[:id])
-    @dogs.name = "george"
-    @dogs.breed = "hound"
-    @dogs.age = 1
+    @dogs.name = params[:name]
+    @dogs.breed = params[:breed]
+    @dogs.age = params[:age]
     render 'show.json.jb'
   end
 end
