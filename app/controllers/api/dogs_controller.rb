@@ -8,4 +8,13 @@ class Api::DogsController < ApplicationController
     @dogs = Dog.find_by(id: params[:id])
     render 'show.json.jb'
   end
+
+  def create
+    @dogs = Dog.new(
+    name: "tony",
+    breed: "Lab",
+    age:2
+    )
+    render 'show.json.jb'
+  end
 end
