@@ -27,4 +27,10 @@ class Api::DogsController < ApplicationController
     @dogs.save
     render 'show.json.jb'
   end
+
+  def destroy
+    @dogs = Dog.find_by(id: params[:id])
+    @dogs.destroy
+    render json: {message: "You have deleted"} 
+  end
 end
