@@ -11,10 +11,11 @@ class Api::DogsController < ApplicationController
 
   def create
     @dogs = Dog.new(
-    name: "tony",
-    breed: "Lab",
-    age:2
+    name: params[:name],
+    breed: params[:breed],
+    age:params[:age]
     )
+    @dogs.save
     render 'show.json.jb'
   end
 end
